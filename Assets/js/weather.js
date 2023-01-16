@@ -1,5 +1,9 @@
+// Variables that grab the search bar and submit button.
+
 var searchInfo = document.querySelector(".loc");
 var searchButton = document.getElementById("submit");
+
+// Variables that grab the p and img tags that correspond to weather dasta for a particular day. 
 
 var day1 = document.getElementById("day1");
 var day2 = document.getElementById("day2");
@@ -32,9 +36,14 @@ var wind4 = document.getElementById('wind4');
 var wind5 = document.getElementById('wind5');
 
 
+
+// Counter for search values for local storage so search items are not overwritten. Variable to grab the empty history div for appending search items with created buttons. 
+
 var searchValue = 1;
 var historySearch = document.getElementById("history");
 
+
+// Stores Searches in local storage and creates a button element to represent it on the page in search history. Assigns buttons a class and individual IDs. Appends to empty div for search history.  
 
 function storeSearch() {
   localStorage.setItem("search " + searchValue, searchInfo.value);
@@ -44,6 +53,9 @@ function storeSearch() {
   historySearch.appendChild(historyButton);
   searchValue++;
 };
+
+
+// Function to query the API and display the weather on weather cards. 
 
 function getWeatherApi() {
 
@@ -62,6 +74,8 @@ function getWeatherApi() {
 
         var wicon = "https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + "@2x.png";
         var date = new Date(data.list[i].dt * 1000);
+
+        // Days are set in array of 40 that corresponds to 3 hour intervals per day. the 0 object represents 0300 hours on the first day, the 7 represents 0300 on the second, and so on. This grabs the data from these days and displays it on the weather cards. 
 
         if(i===0){
           day1.textContent = date.toDateString();
@@ -100,10 +114,18 @@ function getWeatherApi() {
         }
       }
   })
+
+  // Stores the user's search in local storage and in the search history menu. 
+
   storeSearch();
 }
 
+// API function runs upon the click on the submit button next to the search menu. 
+
 searchButton.addEventListener('click', getWeatherApi);
+
+
+// Event listener that runs a function to set the search menu bar's text content to the history item that is clicked, and runs the API function for that history item. Since the API function creates a button for the item that was just searched, this event listener function will also remove the button that was clicked so that there are not duplicates. 
 
 historySearch.addEventListener("click", function(event){
   searchInfo.value = event.target.textContent;
