@@ -27,10 +27,75 @@
       <h1>My Travel App</h1>
     </div>
 
+
     <!-- Weather Forecast Container -->
-    <div class="cell grid-x grid-margin-x align-center">
-      <h1>Weather Forecase Goes Here</h1>
-    </div>
+    <div class="cell grid-x align-center card-height">
+
+      <div class="forecast-heading">
+        <h4>Five Day Forecast</h4>
+      </div>
+
+      <div class="card">
+        <div id="day1" class="card-divider data-label"></div>
+    
+        <div class="card-section">
+          <img id="img1" src="">
+          <p class="data-label" id="temp1">Temperature: </p>
+          <p class="data-label" id="wind1">Wind: </p>
+          <p class="data-label">Description: </p>
+          <p class="data-label" id="description1"></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div id="day2" class="card-divider data-label"></div>
+    
+        <div class="card-section">
+          <img id="img2" src="">
+          <p class="data-label" id="temp2">Temperature: </p>
+          <p class="data-label" id="wind2">Wind: </p>
+          <p class="data-label">Description: </p>
+          <p class="data-label" id="description2"></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div id="day3" class="card-divider data-label"></div>
+    
+        <div class="card-section">
+          <img id="img3" src="">
+          <p class="data-label" id="temp3">Temperature: </p>
+          <p class="data-label" id="wind3">Wind: </p>
+          <p class="data-label">Description: </p>
+          <p class="data-label" id="description3"></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div id="day4" class="card-divider data-label"></div>
+    
+        <div class="card-section">
+          <img id="img4" src="">
+          <p class="data-label" id="temp4">Temperature: </p>
+          <p class="data-label" id="wind4">Wind: </p>
+          <p class="data-label">Description: </p>
+          <p class="data-label" id="description4"></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div id="day5" class="card-divider data-label"></div>
+    
+        <div class="card-section">
+          <img id="img5" src="">
+          <p class="data-label" id="temp5">Temperature: </p>
+          <p class="data-label" id="wind5">Wind: </p>
+          <p class="data-label">Description: </p>
+          <p class="data-label" id="description5"></p>
+        </div>
+      </div>
+
+  </div>
 
     <!-- Left Container -->
     <div class="cell medium-auto medium-cell-block-container">
@@ -45,19 +110,19 @@
                   <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
                   <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
                   <li class="is-active orbit-slide">
-                    <img class="orbit-image" src="//foundation.zurb.com/sites/docs/assets/img/orbit/01.jpg" alt="Space">
+                    <img class="orbit-image" src="https://foundation.zurb.com/sites/docs/assets/img/orbit/01.jpg" alt="Space">
                     <figcaption class="orbit-caption">Space, the final frontier.</figcaption>
                   </li>
                   <li class="orbit-slide">
-                    <img class="orbit-image" src="//foundation.zurb.com/sites/docs/assets/img/orbit/02.jpg" alt="Space">
+                    <img class="orbit-image" src="https://foundation.zurb.com/sites/docs/assets/img/orbit/02.jpg" alt="Space">
                     <figcaption class="orbit-caption">Lets Rocket!</figcaption>
                   </li>
                   <li class="orbit-slide">
-                    <img class="orbit-image" src="//foundation.zurb.com/sites/docs/assets/img/orbit/03.jpg" alt="Space">
+                    <img class="orbit-image" src="https://foundation.zurb.com/sites/docs/assets/img/orbit/03.jpg" alt="Space">
                     <figcaption class="orbit-caption">Encapsulating</figcaption>
                   </li>
                   <li class="orbit-slide">
-                    <img class="orbit-image" src="//foundation.zurb.com/sites/docs/assets/img/orbit/04.jpg" alt="Space">
+                    <img class="orbit-image" src="https://foundation.zurb.com/sites/docs/assets/img/orbit/04.jpg" alt="Space">
                     <figcaption class="orbit-caption">Outta This World</figcaption>
                   </li>
                 </ul>
@@ -74,17 +139,15 @@
           <!-- Input Component -->
           <div class="input">
             <input type="search" class="loc">
-            <input type="submit" value="submit">
+            <input type="submit" id="submit" value="submit">
           </div>
 
           <!-- Vertical Menu Component -->
-          <ul class="vertical menu">
-            <li>day1</li>
-            <li>day2</li>
-            <li>day3</li>
-            <li>day4</li>
-            <li>day5</li>
-          </ul>
+          <div>
+            <h5>Search History: </h5>
+              <div class="history menu" id="history">
+              </div>
+          </div>
         </div>
 
         <!-- Right Pane Container -->
@@ -124,5 +187,6 @@
     <script src="./Assets/js/vendor/what-input.js"></script>
     <script src="./Assets/js/vendor/foundation.js"></script>
     <script src="./Assets/js/app.js"></script>
+    <script src="./Assets/js/weather.js"></script>
   </body>
 </html>
