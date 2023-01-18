@@ -3,7 +3,7 @@
 var searchInfo = document.querySelector(".loc");
 var searchButton = document.getElementById("submit");
 
-// Variables that grab the p and img tags that correspond to weather dasta for a particular day. 
+// Variables that grab the p and img tags that correspond to weather data for a particular day. 
 
 var day1 = document.getElementById("day1");
 var day2 = document.getElementById("day2");
@@ -43,7 +43,7 @@ var searchValue = 1;
 var historySearch = document.getElementById("history");
 
 
-// Stores Searches in local storage and creates a button element to represent it on the page in search history. Assigns buttons a class and individual IDs. Appends to empty div for search history.  
+// Stores searches in local storage and creates a button element to represent it on the page in search history. Assigns buttons a class and individual IDs. Appends to empty div for search history.  
 
 function storeSearch() {
   localStorage.setItem("search " + searchValue, searchInfo.value);
