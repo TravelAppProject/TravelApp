@@ -69,7 +69,6 @@ function getWeatherApi() {
     .then(function (data) {
       console.log(data);
 
-
       for(i=0;i<data.list.length;i++){
 
         var wicon = "https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + "@2x.png";
