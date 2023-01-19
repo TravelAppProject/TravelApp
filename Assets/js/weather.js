@@ -128,9 +128,11 @@ searchButton.addEventListener('click', getWeatherApi);
 // Event listener that runs a function to set the search menu bar's text content to the history item that is clicked, and runs the API function for that history item. Since the API function creates a button for the item that was just searched, this event listener function will also remove the button that was clicked so that there are not duplicates. 
 
 historySearch.addEventListener("click", function(event){
-  event.stopImmediatePropagation();
-  searchInfo.value = event.target.textContent;
-  var removeHistoryButton = event.target;
-  getWeatherApi();
-  removeHistoryButton.remove();
-})
+  if(event.target.tagName==="BUTTON"){
+    event.stopImmediatePropagation();
+    searchInfo.value = event.target.textContent;
+    var removeHistoryButton = event.target;
+    getWeatherApi();
+    removeHistoryButton.remove();
+  }
+});
