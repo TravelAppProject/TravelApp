@@ -27,6 +27,13 @@
     padding-right: 10px;
 }
 
+h1{
+    font-family: "fantasy";
+    text-align:center;
+}
+h4{
+    font-family:'fantasy';
+}
 .card-height {
     height: 300px;
 }
@@ -40,12 +47,21 @@
     align-items: center;
     background-color: blue;
     color: white;
+    border-radius: 0.6rem;
+    background-image: ;
 }
 
 .forecast-heading h4 {
-    border-bottom: 5px solid white;
+    border-bottom: 3px solid white;
 }
 
 .data-label {
     font-weight: bolder;
+}
+
+.loc{
+    border-radius: 12px;
+    border: 1px #000 solid;
+    padding: 3px 3px 3px 25px;
+    
 }
